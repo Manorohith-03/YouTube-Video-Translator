@@ -1,5 +1,7 @@
 # YouTube-Video-Translator
 
       The influence of digital learning has made YouTube the key platform for getting any sort of educational, technical, or informational content. The greatest limiting factor for non-English speakers is that many multilingual countries, including India, lack ample English fluency. Most YouTube content in English cannot be accessed by regional language users, mainly from rural areas. Although YouTube allows for subtitles to be translated, they may not be accurate and often lack context; furthermore, they do not offer any dubbing support, restricting their usefulness for many users. 
+      
       The project solves these limitations by developing an AI system that extracts English captions from YouTube videos, translates them with a fine-tuned mBART model into Tamil, produces synchronized Tamil audio from the translation using gTTS, and combines the translated audio with the original video using MoviePy. Finally, through a Flask-based web application, a fully dubbed video in the user's language will be generated. 
+      
       The system is lightweight, easy to use, and scalable, making it a viable solution for enhancing content accessibility across linguistic barriers. This work has shown how a combination of machine translation, speech synthesis, and video processing can create a bridge across the digital language divide for better access to online content.
