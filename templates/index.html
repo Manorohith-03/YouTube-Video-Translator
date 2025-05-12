@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2d0428e67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-text">
+            <h1><i class="fas fa-language"></i> YouTube Video Translator</h1>
+            <p>Translate English-captioned videos into Tamil with synchronized AI-generated voiceovers.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        {% if error %}
+        <div class="error-message">
+            <i class="fas fa-exclamation-circle"></i> {{ error }}
+        </div>
+        {% endif %}
+        <form method="POST">
+            <label for="link"><i class="fas fa-link"></i> YouTube Video Link:</label>
+            <input type="text" id="link" name="link" placeholder="https://www.youtube.com/watch?v=..." required>
+
+            <label for="target_lang"><i class="fas fa-globe"></i> Target Language:</label>
+            <select id="target_lang" name="target_lang" required>
+                <option value="ta_IN">Tamil</option>
+            </select>
+
+            <label for="gender"><i class="fas fa-user-voice"></i> Voice Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male_ai">AI Voice</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <button type="submit"><i class="fas fa-download"></i> Translate and Download</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 YouTube Translator | Final Year Project</p>
+    </footer>
+</body>
+</html>
